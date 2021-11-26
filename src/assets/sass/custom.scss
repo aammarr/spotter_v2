@@ -1,0 +1,108 @@
+.table-custom {
+    thead {
+        tr {
+            th {
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                text-align: center;
+                vertical-align: inherit;
+            }
+        }
+    }
+}
+
+.tweet_text {
+    font-size: smaller;
+    justify-content: space-between;
+}
+
+.grow_on_focus {
+    width: 20% !important;
+
+    &:focus {
+        width: 40% !important;
+    }
+}
+
+.multiselect__tag {
+    background: #4A7DFF !important;
+}
+
+.multiselect__input {
+    font-size: 14px !important;
+
+    &:focus {
+        color: #adadad !important;
+
+    }
+
+    .multiselect__placeholder {
+        color: #adadad !important;
+
+    }
+}
+
+.multiselect__option--highlight {
+    background-color: #6993ff !important;
+    color: #fff;
+}
+
+.multiselect__option--highlight:after {
+    background: #6993ff !important;
+    color: #fff;
+}
+
+.page-item.active .page-link {
+
+    background-color: #6993ff !important;
+    border-color: #6993ff !important;
+}
+
+
+.editable_profile_image_container {
+    height: 120px;
+    width: 120px;
+    position: relative;
+    border: 1px transparent;
+    border-radius: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.readonly_profile_image {
+    height: 100px;
+    width: 100px;
+    border: 1px transparent;
+    border-radius: 100%;
+}
+
+.profile_image_edit_icon {
+    height: 25px;
+    width: 25px;
+    border: none;
+    border-radius: 100%;
+    background: #6993ff !important;
+    position: absolute;
+    z-index: 999;
+    bottom: 8px;
+    right: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+    margin-bottom: -2px !important; 
+}
+.nav .nav-link:hover:not(.disabled){
+    color: #1d5cff !important;
+}
