@@ -165,7 +165,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-                 <couponsmenu></couponsmenu>
+                <couponsmenu></couponsmenu>
               </perfect-scrollbar>
             </div>
           </b-tab>
