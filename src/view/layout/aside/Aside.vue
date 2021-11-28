@@ -165,7 +165,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-                Coupons Menu
+                 <couponsmenu></couponsmenu>
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -249,12 +249,14 @@ import { mapGetters } from "vuex";
 import KTLayoutAside from "@/assets/js/layout/base/aside.js";
 import KTLayoutAsideMenu from "@/assets/js/layout/base/aside-menu.js";
 import KTLayoutAsideToggle from "@/assets/js/layout/base/aside-toggle.js";
+import couponsmenu from "../../pages/components/coupons/CouponsMenu";
 import {
   ADD_BODY_CLASSNAME,
   REMOVE_BODY_CLASSNAME
 } from "@/core/services/store/htmlclass.module.js";
 export default {
   name: "KTAside",
+  components: { couponsmenu },
   data() {
     return {
       insideTm: 0,

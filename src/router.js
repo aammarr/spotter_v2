@@ -18,6 +18,46 @@ export default new Router({
             headerFiltersEnable: true,
             navSearchName: "Dashboard"
           }
+        },
+        {
+          path: "/metrics",
+          name: "metrics",
+          component: () =>
+            import("@/view/pages/components/metrics/Metrics.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Metrics"
+          }
+        },
+        {
+          path: "/addcoupon",
+          name: "addcoupon",
+          component: () =>
+            import("@/view/pages/components/coupons/AddCoupon.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Add Coupon"
+          }
+        },
+        {
+          path: "/searchcoupon",
+          name: "searchcoupon",
+          component: () =>
+            import("@/view/pages/components/coupons/SearchCoupon.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Search Coupon"
+          }
+        },
+        {
+          path: "/keyword",
+          name: "keyword",
+          component: () =>
+            import("@/view/pages/components/coupons/Keyword.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Keyword"
+          }
         }
       ]
     },
