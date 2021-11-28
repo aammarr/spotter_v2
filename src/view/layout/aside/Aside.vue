@@ -149,8 +149,7 @@
 
       <div
         class="aside-footer d-flex flex-column align-items-center flex-column-auto py-4 py-lg-10"
-      >
-      </div>
+      ></div>
     </div>
 
     <div class="aside-secondary d-flex flex-row-fluid">
@@ -178,7 +177,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-               Report Menu
+                Report Menu
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -190,7 +189,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-               Tweets Menu
+                Tweets Menu
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -216,7 +215,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-               Tweet Author Menu
+                Tweet Author Menu
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -228,7 +227,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-               Affiliate Menu
+                Affiliate Menu
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -331,7 +330,7 @@ export default {
   height: 30px;
   width: 30px;
 }
-.angle-icon{
+.angle-icon {
   font-size: 1.5em;
 }
 </style>

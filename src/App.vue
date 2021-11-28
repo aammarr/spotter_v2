@@ -14,7 +14,6 @@
 
 // Main demo style scss
 @import "assets/sass/style.vue";
-
 </style>
 
 <script>
