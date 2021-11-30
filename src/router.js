@@ -58,6 +58,46 @@ export default new Router({
             headerFiltersEnable: false,
             navSearchName: "Keyword"
           }
+        },
+        {
+          path: "/validtweets",
+          name: "validtweets",
+          component: () =>
+            import("@/view/pages/components/tweets/ValidTweets.vue"),
+          meta: {
+            headerFiltersEnable: true,
+            navSearchName: "Valid Tweets"
+          }
+        },
+        {
+          path: "/spamtweets",
+          name: "spamtweets",
+          component: () =>
+            import("@/view/pages/components/tweets/SpamTweets.vue"),
+          meta: {
+            headerFiltersEnable: true,
+            navSearchName: "Span Tweets"
+          }
+        },
+        {
+          path: "/addtweets",
+          name: "addtweets",
+          component: () =>
+            import("@/view/pages/components/tweets/AddTweets.vue"),
+          meta: {
+            headerFiltersEnable: true,
+            navSearchName: "Add Tweets"
+          }
+        },
+        {
+          path: "/alltweets",
+          name: "alltweets",
+          component: () =>
+            import("@/view/pages/components/tweets/AllTweets.vue"),
+          meta: {
+            headerFiltersEnable: true,
+            navSearchName: "All Tweets"
+          }
         }
       ]
     },

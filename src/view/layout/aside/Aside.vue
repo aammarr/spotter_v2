@@ -56,7 +56,7 @@
               class="nav-link btn btn-icon btn-clean btn-lg"
               data-toggle="tab"
               v-on:click="setActiveTab"
-              data-tab="2"
+              data-tab="1"
             >
               <img
                 class="aside_main_icons"
@@ -76,7 +76,7 @@
               class="nav-link btn btn-icon btn-clean btn-lg"
               data-toggle="tab"
               v-on:click="setActiveTab"
-              data-tab="3"
+              data-tab="2"
             >
               <img
                 class="aside_main_icons"
@@ -96,7 +96,7 @@
               class="nav-link btn btn-icon btn-clean btn-lg"
               data-toggle="tab"
               v-on:click="setActiveTab"
-              data-tab="4"
+              data-tab="3"
             >
               <img
                 class="aside_main_icons"
@@ -116,7 +116,7 @@
               class="nav-link btn btn-icon btn-clean btn-lg"
               data-toggle="tab"
               v-on:click="setActiveTab"
-              data-tab="5"
+              data-tab="4"
             >
               <img
                 class="aside_main_icons"
@@ -136,7 +136,7 @@
               class="nav-link btn btn-icon btn-clean btn-lg"
               data-toggle="tab"
               v-on:click="setActiveTab"
-              data-tab="6"
+              data-tab="5"
             >
               <img
                 class="aside_main_icons"
@@ -190,6 +190,7 @@
                 style="max-height: 90vh; position: relative"
               >
                 Tweets Menu
+                <tweetsmenu></tweetsmenu>
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -250,13 +251,14 @@ import KTLayoutAside from "@/assets/js/layout/base/aside.js";
 import KTLayoutAsideMenu from "@/assets/js/layout/base/aside-menu.js";
 import KTLayoutAsideToggle from "@/assets/js/layout/base/aside-toggle.js";
 import couponsmenu from "../../pages/components/coupons/CouponsMenu";
+import tweetsmenu from "../../pages/components/tweets/TweetsMenu";
 import {
   ADD_BODY_CLASSNAME,
   REMOVE_BODY_CLASSNAME
 } from "@/core/services/store/htmlclass.module.js";
 export default {
   name: "KTAside",
-  components: { couponsmenu },
+  components: { couponsmenu, tweetsmenu },
   data() {
     return {
       insideTm: 0,
