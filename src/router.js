@@ -98,6 +98,26 @@ export default new Router({
             headerFiltersEnable: true,
             navSearchName: "All Tweets"
           }
+        },
+        {
+          path: "/addclients",
+          name: "addclients",
+          component: () =>
+            import("@/view/pages/components/clients/AddClients.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Add Clients"
+          }
+        },
+        {
+          path: "/searchclients",
+          name: "searchclients",
+          component: () =>
+            import("@/view/pages/components/clients/SearchClients.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Search Clients"
+          }
         }
       ]
     },

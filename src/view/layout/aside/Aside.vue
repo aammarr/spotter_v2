@@ -203,7 +203,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-                Cients Menu
+                <clientsmenu></clientsmenu>
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -252,13 +252,14 @@ import KTLayoutAsideMenu from "@/assets/js/layout/base/aside-menu.js";
 import KTLayoutAsideToggle from "@/assets/js/layout/base/aside-toggle.js";
 import couponsmenu from "../../pages/components/coupons/CouponsMenu";
 import tweetsmenu from "../../pages/components/tweets/TweetsMenu";
+import clientsmenu from "../../pages/components/clients/ClientsMenu.vue";
 import {
   ADD_BODY_CLASSNAME,
   REMOVE_BODY_CLASSNAME
 } from "@/core/services/store/htmlclass.module.js";
 export default {
   name: "KTAside",
-  components: { couponsmenu, tweetsmenu },
+  components: { couponsmenu, tweetsmenu, clientsmenu },
   data() {
     return {
       insideTm: 0,
