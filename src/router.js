@@ -118,6 +118,52 @@ export default new Router({
             headerFiltersEnable: false,
             navSearchName: "Search Clients"
           }
+        },
+        {
+          path: "/pdfreport",
+          name: "pdfreport",
+          component: () =>
+            import("@/view/pages/components/reports/PdfReport.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "PDF Report"
+          }
+        },
+        {
+          path: "/addvalidusername",
+          name: "addvalidusername",
+          component: () =>
+            import(
+              "@/view/pages/components/tweet_authors/AddValidUserName.vue"
+            ),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Add valid Username"
+          }
+        },
+        {
+          path: "/deletevalidusername",
+          name: "deletevalidusername",
+          component: () =>
+            import(
+              "@/view/pages/components/tweet_authors/DeleteValidUserName.vue"
+            ),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Delete Valid Username"
+          }
+        },
+        {
+          path: "/allfrequentspammers",
+          name: "allfrequentspammers",
+          component: () =>
+            import(
+              "@/view/pages/components/tweet_authors/AllFrequentSpammers.vue"
+            ),
+          meta: {
+            headerFiltersEnable: true,
+            navSearchName: "All Frequent Spammers"
+          }
         }
       ]
     },

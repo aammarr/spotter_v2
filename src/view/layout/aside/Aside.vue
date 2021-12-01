@@ -177,7 +177,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-                Report Menu
+                <reportsmenu></reportsmenu>
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -189,7 +189,6 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-                Tweets Menu
                 <tweetsmenu></tweetsmenu>
               </perfect-scrollbar>
             </div>
@@ -216,7 +215,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-                Tweet Author Menu
+                <tweetauthormenu></tweetauthormenu>
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -253,13 +252,22 @@ import KTLayoutAsideToggle from "@/assets/js/layout/base/aside-toggle.js";
 import couponsmenu from "../../pages/components/coupons/CouponsMenu";
 import tweetsmenu from "../../pages/components/tweets/TweetsMenu";
 import clientsmenu from "../../pages/components/clients/ClientsMenu.vue";
+import reportsmenu from "../../pages/components/reports/ReportsMenu";
+import tweetauthormenu from "../../pages/components/tweet_authors/TweetAuthorMenu";
+
 import {
   ADD_BODY_CLASSNAME,
   REMOVE_BODY_CLASSNAME
 } from "@/core/services/store/htmlclass.module.js";
 export default {
   name: "KTAside",
-  components: { couponsmenu, tweetsmenu, clientsmenu },
+  components: {
+    couponsmenu,
+    tweetsmenu,
+    clientsmenu,
+    reportsmenu,
+    tweetauthormenu
+  },
   data() {
     return {
       insideTm: 0,
