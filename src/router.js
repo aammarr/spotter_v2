@@ -164,6 +164,25 @@ export default new Router({
             headerFiltersEnable: true,
             navSearchName: "All Frequent Spammers"
           }
+        },
+        {
+          path: "/searchaffiliates",
+          name: "searchaffiliates",
+          component: () =>
+            import("@/view/pages/components/affiliate/SearchAffiliate.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Search Affiliate"
+          }
+        },
+        {
+          path: "/ocr",
+          name: "ocr",
+          component: () => import("@/view/pages/components/ocr/OCR.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "OCR"
+          }
         }
       ]
     },

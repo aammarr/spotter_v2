@@ -227,7 +227,7 @@
                 class="aside-menu scroll"
                 style="max-height: 90vh; position: relative"
               >
-                Affiliate Menu
+                <affiliatemenu></affiliatemenu>
               </perfect-scrollbar>
             </div>
           </b-tab>
@@ -254,6 +254,7 @@ import tweetsmenu from "../../pages/components/tweets/TweetsMenu";
 import clientsmenu from "../../pages/components/clients/ClientsMenu.vue";
 import reportsmenu from "../../pages/components/reports/ReportsMenu";
 import tweetauthormenu from "../../pages/components/tweet_authors/TweetAuthorMenu";
+import affiliatemenu from "../../pages/components/affiliate/AffiliateMenu";
 
 import {
   ADD_BODY_CLASSNAME,
@@ -266,7 +267,8 @@ export default {
     tweetsmenu,
     clientsmenu,
     reportsmenu,
-    tweetauthormenu
+    tweetauthormenu,
+    affiliatemenu
   },
   data() {
     return {
