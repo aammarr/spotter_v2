@@ -183,6 +183,35 @@ export default new Router({
             headerFiltersEnable: false,
             navSearchName: "OCR"
           }
+        },
+        {
+          path: "/userprofile",
+          name: "userprofile",
+          component: () =>
+            import("@/view/pages/components/settings/Profile.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "User Profile"
+          }
+        },
+        {
+          path: "/accountsetting",
+          name: "accountsetting",
+          component: () =>
+            import("@/view/pages/components/settings/AccountSetting.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Account Setting"
+          }
+        },
+        {
+          path: "/logs",
+          name: "logs",
+          component: () => import("@/view/pages/components/settings/Logs.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Logs"
+          }
         }
       ]
     },
