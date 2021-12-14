@@ -176,6 +176,16 @@ export default new Router({
           }
         },
         {
+          path: "/selectedCoupon",
+          name: "selectedCoupon",
+          props: route => ({ query: route.query.q }),
+          component: () =>
+            import("@/view/pages/components/affiliate/SelectedCoupon.vue"),
+          meta: {
+            headerFiltersEnable: false
+          }
+        },
+        {
           path: "/ocr",
           name: "ocr",
           component: () => import("@/view/pages/components/ocr/OCR.vue"),
