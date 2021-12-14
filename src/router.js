@@ -195,6 +195,16 @@ export default new Router({
           }
         },
         {
+          path: "/landmark",
+          name: "landmark",
+          component: () =>
+            import("@/view/pages/components/landmark/Landmark.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "Land Mark"
+          }
+        },
+        {
           path: "/userprofile",
           name: "userprofile",
           component: () =>
