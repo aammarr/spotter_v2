@@ -12,7 +12,7 @@
         format="DD-MM-YYYY"
         value-type="YYYY-MM-DD"
         class="ml-2"
-        style="width:20%"
+        style="width:15%"
       ></date-picker>
       <date-picker
         placeholder="Date To"
@@ -24,19 +24,22 @@
         format="DD-MM-YYYY"
         value-type="YYYY-MM-DD"
         class="ml-2"
-        style="width:20%"
+        style="width:15%"
       ></date-picker>
+      <CouponDropdown class="ml-2" @changed="changeCoupon" />
       <multiselect
-        v-model="selected_coupon"
-        :options="allCoupons"
+        v-model="sort_by"
+        :options="getSortByArr()"
+        label="label"
+        track="key"
         class="multiselectcustomclass ml-2"
         selectLabel="select"
         deselectLabel="remove"
         :preserve-search="true"
         :maxHeight="200"
-        placeholder="Coupons"
-        :multiple="true"
-        style="width:25%"
+        placeholder="Sort-by"
+        :multiple="false"
+        style="width:15%"
       >
       </multiselect>
       <div class="ml-2">
@@ -53,7 +56,7 @@
           type="button"
           class="btn btn-info"
           @click="applyFilter"
-          :disabled="!(date_from || date_to || selected_coupon)"
+          :disabled="!(date_from || date_to || selected_coupon || sort_by)"
         >
           Apply Filters
         </button>
@@ -77,7 +80,6 @@
         head-variant="light dark"
         show-empty
         borderless
-        @row-selected="onRowSelected"
       >
         <template v-slot:cell(sr)="row">
           {{ tableData.indexOf(row.item) + 1 }}
@@ -132,9 +134,10 @@
 <script>
 import { SET_BREADCRUMB } from "@/core/services/store/breadcrumbs.module";
 import ApiService from "../../../../core/services/api.service";
-
+import CouponDropdown from "../subComponents/CouponDropdown.vue";
 export default {
   name: "searchaffiliates",
+  components: { CouponDropdown },
   data() {
     return {
       isLoading: false,
@@ -142,6 +145,7 @@ export default {
       per_page: { val: 25, label: "25" },
       total_records: "",
       isFilter: false,
+      sort_by: "",
       date_from: null,
       date_to: null,
       selected_coupon: null,
@@ -165,23 +169,27 @@ export default {
           thStyle: { minWidth: "15%" }
         },
         {
-          key: "order",
+          key: "order_count",
           label: "Order",
+          sortable: true,
           thStyle: { minWidth: "15%" }
         },
         {
           key: "revenue",
           label: "Revenue",
+          sortable: true,
           thStyle: { minWidth: "15%" }
         },
         {
           key: "commission",
           label: "Commission",
+          sortable: true,
           thStyle: { minWidth: "15%" }
         },
         {
-          key: "spam",
+          key: "frequency_of_spam",
           label: "Spam",
+          sortable: true,
           thStyle: { minWidth: "15%" }
         }
       ],
@@ -196,7 +204,6 @@ export default {
   },
   mounted() {
     this.$store.dispatch(SET_BREADCRUMB, [{ title: "Affiliate" }]);
-    this.getAllCoupons();
     this.getData();
   },
   methods: {
@@ -210,6 +217,7 @@ export default {
         end_date: this.date_to,
         coupons: this.selected_coupon,
         page: this.current_page,
+        sortby: this.sort_by.key,
         // per_page: "25"
         limit: "25"
       };
@@ -231,14 +239,16 @@ export default {
       this.getData();
     },
     /**
-     * getAllCoupons function
+     * getAllCoupons function by Search
      */
-    getAllCoupons() {
-      ApiService.get(`/coupons/getallcoupons`).then(response => {
-        this.allCoupons = response.data.data;
-      });
-    },
 
+    changeCoupon(val) {
+      this.selected_coupon = val;
+    },
+    getSortByArr() {
+      const arr = this.fields.filter(el => (el.sortable == true ? el : ""));
+      return arr;
+    },
     applyFilter() {
       this.isFilter = true;
       this.current_page = 1;
@@ -249,6 +259,7 @@ export default {
       this.date_from = null;
       this.date_to = null;
       this.selected_coupon = null;
+      this.sort_by = "";
       this.isFilter = false;
       this.getData();
     }

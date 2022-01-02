@@ -54,15 +54,17 @@
     <b-card v-if="!isLoading" class="mt-3">
       <div class="d-flex justify-content-between mb-2">
         <h2>Whitelisted Users</h2>
-        <button
-          type="button"
-          class="btn border border-danger"
-          @click="confirmation('delete_btn')"
-          v-if="selected.length > 0"
-        >
-          <img src="media/images/other_icons/btn_close.svg" class="mr-2" />
-          <span class="text-danger">Delete Selected</span>
-        </button>
+        <div>
+          <button
+            type="button"
+            class="btn border border-danger mr-3"
+            @click="confirmation('delete_btn')"
+            v-if="selected.length > 0"
+          >
+            <img src="media/images/other_icons/btn_close.svg" class="mr-2" />
+            <span class="text-danger">Delete Selected</span>
+          </button>
+        </div>
       </div>
 
       <b-table
@@ -77,15 +79,15 @@
         <template v-slot:cell(sno)="row">
           {{ row.index + 1 }}
         </template>
-        <template #cell(selected)="{ rowSelected }">
+        <!-- <template #cell(selected)="{ rowSelected }">
           <template v-if="rowSelected">
             <b-icon icon="check-square-fill" scale="1" variant="info"></b-icon>
           </template>
           <template v-else>
             <b-icon icon="square" scale="1" variant="info"></b-icon>
           </template>
-        </template>
-        <template v-slot:cell(action)="row">
+        </template> -->
+        <!-- <template v-slot:cell(action)="row">
           <button type="button" class="btn bg-light-danger btn-sm">
             <b-icon
               icon="x"
@@ -94,7 +96,7 @@
               @click="confirmationForSingleRow(row.item.username)"
             ></b-icon>
           </button>
-        </template>
+        </template> -->
       </b-table>
       <div class="d-flex justify-content-between" v-if="tableData.length > 0">
         <b-pagination
@@ -120,6 +122,7 @@ export default {
   data() {
     return {
       isLoading: false,
+      selection: false,
       current_page: 1,
       per_page: { val: 25, label: "25" },
       from: "",
@@ -130,11 +133,11 @@ export default {
       valid_userid_options: [],
       headVariant: "light",
       fields: [
-        {
-          key: "selected",
-          label: "Selected",
-          thStyle: { minWidth: "100px" }
-        },
+        // {
+        //   key: "selected",
+        //   label: "Selected",
+        //   thStyle: { minWidth: "100px" }
+        // },
         {
           key: "sno",
           label: "S.No",
@@ -154,12 +157,12 @@ export default {
           key: "username",
           label: "Twitter handle",
           thStyle: { minWidth: "250px" }
-        },
-        {
-          key: "action",
-          label: "Action",
-          thStyle: { minWidth: "100px" }
         }
+        // {
+        //   key: "action",
+        //   label: "Action",
+        //   thStyle: { minWidth: "100px" }
+        // }
       ],
       tableData: [],
       selected: [],

@@ -80,7 +80,8 @@
         @row-selected="onRowSelected"
       >
         <template v-slot:cell(created_at)="row">
-          {{ row.item.created_at.split(" ")[1] }}
+          <!-- {{ row.item.created_at.split(" ")[1] }} -->
+          {{ row.item.created_at }}
         </template>
         <template v-slot:cell(keyword)="row">
           <b>{{ row.item.keyword }}</b>
@@ -125,7 +126,7 @@
 </template>
 <script>
 import { SET_BREADCRUMB } from "@/core/services/store/breadcrumbs.module";
-import ApiService from "../../../../../src/core/services/api.service";
+import ApiService from "../../../../core/services/api.service";
 
 export default {
   name: "logs",
@@ -150,7 +151,7 @@ export default {
       fields: [
         {
           key: "created_at",
-          label: "TIME",
+          label: "DATETIME",
           thStyle: { minWidth: "15%" }
         },
         {
