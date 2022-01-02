@@ -87,7 +87,7 @@
         <template v-slot:cell(coupon_code)="row">
           <router-link
             :to="
-              '/selectedCoupon?code=' +
+              '/selected-Coupon?code=' +
                 row.item.coupon_code +
                 '&from=' +
                 (date_from ? date_from : '') +

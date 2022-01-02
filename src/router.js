@@ -176,7 +176,7 @@ export default new Router({
           }
         },
         {
-          path: "/selectedCoupon",
+          path: "/selected-Coupon",
           name: "selectedCoupon",
           props: route => ({ query: route.query.q }),
           component: () =>
