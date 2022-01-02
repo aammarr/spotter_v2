@@ -10,28 +10,50 @@
       </div>
       <div class="card-body">
         <b-form class="form mt-3" @submit.stop.prevent="recognize">
-          <b-form-group>
-            <b-input-group>
-              <b-input-group-prepend is-text>
-                <b-icon icon="image-fill"></b-icon>
-              </b-input-group-prepend>
-              <!-- :disabled="busy" -->
-              <b-form-file
-                id="upload-img"
-                ref="images"
-                v-model="file"
-                :state="required"
-                accept="image/*"
-                @change="onFileChange"
-              ></b-form-file>
-            </b-input-group>
-            <p
-              v-if="required != null && required == false"
-              class="text-danger mt-1"
-            >
-              Image File Required !
-            </p>
-          </b-form-group>
+          <div class="row">
+            <div class="col-md-10">
+              <b-form-group>
+                <b-input-group>
+                  <b-input-group-prepend is-text>
+                    <b-icon icon="image-fill"></b-icon>
+                  </b-input-group-prepend>
+                  <!-- :disabled="busy" -->
+                  <b-form-file
+                    id="upload-img"
+                    ref="images"
+                    v-model="file"
+                    :state="required"
+                    accept="image/*"
+                    @change="onFileChange"
+                  ></b-form-file>
+                </b-input-group>
+                <p
+                  v-if="required != null && required == false"
+                  class="text-danger mt-1"
+                >
+                  Image File Required !
+                </p>
+              </b-form-group>
+            </div>
+            <div class="col-md-2">
+              <b-form-group>
+                <multiselect
+                  v-model="analyze_Lang"
+                  :options="[
+                    { value: 'eng', name: 'English' },
+                    { value: 'ara', name: 'Arabic' }
+                  ]"
+                  label="name"
+                  track="value"
+                  class="multiselectcustomclass ml-2"
+                  selectLabel="select"
+                  deselectLabel="can't remove"
+                  :maxHeight="200"
+                  :allow-empty="false"
+                />
+              </b-form-group>
+            </div>
+          </div>
           <button type="submit" class="btn btn-info btn-sm float-right">
             Analyze Image
           </button>
@@ -100,7 +122,8 @@ export default {
       url: "",
       progressValue: 0,
       maxProgress: 100,
-      content: ""
+      content: "",
+      analyze_Lang: { value: "ara", name: "Arabic" }
     };
   },
   mounted() {
@@ -128,8 +151,8 @@ export default {
       this.setProgressBar();
       const img = document.getElementById("text-img");
       await worker.load();
-      await worker.loadLanguage("ara");
-      await worker.initialize("ara", OEM.LSTM_ONLY);
+      await worker.loadLanguage(this.analyze_Lang.value);
+      await worker.initialize(this.analyze_Lang.value, OEM.LSTM_ONLY);
       await worker.setParameters({
         tessedit_pageseg_mode: PSM.SINGLE_BLOCK
       });
