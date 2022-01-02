@@ -30,7 +30,7 @@ export default new Router({
           }
         },
         {
-          path: "/addcoupon",
+          path: "/add-coupon",
           name: "addcoupon",
           component: () =>
             import("@/view/pages/components/coupons/AddCoupon.vue"),
@@ -40,7 +40,7 @@ export default new Router({
           }
         },
         {
-          path: "/searchcoupon",
+          path: "/search-coupon",
           name: "searchcoupon",
           component: () =>
             import("@/view/pages/components/coupons/SearchCoupon.vue"),
@@ -60,7 +60,7 @@ export default new Router({
           }
         },
         {
-          path: "/validtweets",
+          path: "/valid-tweets",
           name: "validtweets",
           component: () =>
             import("@/view/pages/components/tweets/ValidTweets.vue"),
@@ -70,7 +70,7 @@ export default new Router({
           }
         },
         {
-          path: "/spamtweets",
+          path: "/spam-tweets",
           name: "spamtweets",
           component: () =>
             import("@/view/pages/components/tweets/SpamTweets.vue"),
@@ -80,7 +80,7 @@ export default new Router({
           }
         },
         {
-          path: "/addtweets",
+          path: "/add-tweets",
           name: "addtweets",
           component: () =>
             import("@/view/pages/components/tweets/AddTweets.vue"),
@@ -90,7 +90,7 @@ export default new Router({
           }
         },
         {
-          path: "/alltweets",
+          path: "/all-tweets",
           name: "alltweets",
           component: () =>
             import("@/view/pages/components/tweets/AllTweets.vue"),
@@ -100,7 +100,7 @@ export default new Router({
           }
         },
         {
-          path: "/addclients",
+          path: "/add-clients",
           name: "addclients",
           component: () =>
             import("@/view/pages/components/clients/AddClients.vue"),
@@ -110,7 +110,7 @@ export default new Router({
           }
         },
         {
-          path: "/searchclients",
+          path: "/search-clients",
           name: "searchclients",
           component: () =>
             import("@/view/pages/components/clients/SearchClients.vue"),
@@ -120,7 +120,7 @@ export default new Router({
           }
         },
         {
-          path: "/pdfreport",
+          path: "/pdf-report",
           name: "pdfreport",
           component: () =>
             import("@/view/pages/components/reports/PdfReport.vue"),
@@ -130,7 +130,7 @@ export default new Router({
           }
         },
         {
-          path: "/addvalidusername",
+          path: "/add-username",
           name: "addvalidusername",
           component: () =>
             import(
@@ -142,7 +142,7 @@ export default new Router({
           }
         },
         {
-          path: "/deletevalidusername",
+          path: "/delete-username",
           name: "deletevalidusername",
           component: () =>
             import(
@@ -154,7 +154,7 @@ export default new Router({
           }
         },
         {
-          path: "/allfrequentspammers",
+          path: "/all-frequentspammers",
           name: "allfrequentspammers",
           component: () =>
             import(
@@ -166,7 +166,7 @@ export default new Router({
           }
         },
         {
-          path: "/searchaffiliates",
+          path: "/affiliates",
           name: "searchaffiliates",
           component: () =>
             import("@/view/pages/components/affiliate/SearchAffiliate.vue"),
@@ -205,7 +205,7 @@ export default new Router({
           }
         },
         {
-          path: "/userprofile",
+          path: "/user-profile",
           name: "userprofile",
           component: () =>
             import("@/view/pages/components/settings/Profile.vue"),
@@ -215,7 +215,7 @@ export default new Router({
           }
         },
         {
-          path: "/accountsetting",
+          path: "/account-setting",
           name: "accountsetting",
           component: () =>
             import("@/view/pages/components/settings/AccountSetting.vue"),

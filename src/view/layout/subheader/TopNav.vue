@@ -169,13 +169,13 @@
                   Logs
                 </router-link>
                 <router-link
-                  to="/userprofile"
+                  to="/user-profile"
                   class="text-info btn bg-light-success btn-sm btn-block"
                 >
                   View Profile
                 </router-link>
                 <router-link
-                  to="/accountsetting"
+                  to="/account-setting"
                   class="text-info btn bg-light-success btn-sm btn-block"
                 >
                   Account Settings

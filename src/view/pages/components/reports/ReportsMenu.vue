@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/pdfreport">
+    <router-link to="/pdf-report">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">

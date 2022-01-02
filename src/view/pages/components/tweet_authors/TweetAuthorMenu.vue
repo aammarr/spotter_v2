@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/addvalidusername">
+    <router-link to="/add-username">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">
@@ -19,7 +19,7 @@
         </div>
       </div>
     </router-link>
-    <router-link to="/deletevalidusername">
+    <router-link to="/delete-username">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">
@@ -38,7 +38,7 @@
         </div>
       </div>
     </router-link>
-    <router-link to="/allfrequentspammers">
+    <router-link to="/all-frequentspammers">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">

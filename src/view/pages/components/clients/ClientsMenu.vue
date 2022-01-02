@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/addclients">
+    <router-link to="/add-clients">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">
@@ -17,7 +17,7 @@
         </div>
       </div>
     </router-link>
-    <router-link to="/searchclients">
+    <router-link to="/search-clients">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/validtweets">
+    <router-link to="/valid-tweets">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">
@@ -20,7 +20,7 @@
       </div>
     </router-link>
 
-    <router-link to="/spamtweets">
+    <router-link to="/spam-tweets">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">
@@ -40,7 +40,7 @@
       </div>
     </router-link>
 
-    <router-link to="/addtweets">
+    <router-link to="/add-tweets">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">
@@ -60,7 +60,7 @@
       </div>
     </router-link>
 
-    <router-link to="/alltweets">
+    <router-link to="/all-tweets">
       <div class="list-item hoverable p-2 p-lg-3 mb-2">
         <div class="d-flex align-items-center">
           <div class="symbol symbol-40 symbol-light mr-4">
