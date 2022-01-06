@@ -77,7 +77,7 @@
         @row-selected="onRowSelected"
       >
         <template v-slot:cell(sno)="row">
-          {{ row.index + 1 }}
+          {{ from > 1 ? row.index + from : row.index + 1 }}
         </template>
         <!-- <template #cell(selected)="{ rowSelected }">
           <template v-if="rowSelected">

@@ -82,12 +82,12 @@
         borderless
       >
         <template v-slot:cell(sr)="row">
-          {{ tableData.indexOf(row.item) + 1 }}
+          {{ from > 1 ? row.index + from : row.index + 1 }}
         </template>
         <template v-slot:cell(coupon_code)="row">
           <router-link
             :to="
-              '/selected-Coupon?code=' +
+              '/selectedCoupon?code=' +
                 row.item.coupon_code +
                 '&from=' +
                 (date_from ? date_from : '') +
@@ -121,11 +121,8 @@
           aria-controls="tableHorizontal"
           @change="handlePagination"
         ></b-pagination>
-        <div class="font-size-sm" v-if="total_records > 25">
-          {{ `Showing ${per_page.val} of ${total_records}` }}
-        </div>
-        <div class="font-size-sm" v-if="total_records < 25">
-          {{ `Showing ${total_records} of ${total_records}` }}
+        <div class="font-size-sm">
+          {{ `Showing ${from} to ${to} of ${total_records}` }}
         </div>
       </div>
     </b-card>
@@ -142,6 +139,8 @@ export default {
     return {
       isLoading: false,
       current_page: 1,
+      from: 0,
+      to: 0,
       per_page: { val: 25, label: "25" },
       total_records: "",
       isFilter: false,
@@ -224,7 +223,8 @@ export default {
       ApiService.post(`/getfrequencyofcoupon`, dataToPost).then(response => {
         this.tableData = response.data.data.data;
         this.total_records = response.data.data.total;
-
+        this.from = response.data.data.from;
+        this.to = response.data.data.to;
         this.isLoading = false;
       });
     },
