@@ -144,6 +144,26 @@
               />
             </a>
           </li>
+          <li
+            class="nav-item mb-3"
+            data-placement="right"
+            data-container="body"
+            data-boundary="window"
+            v-b-tooltip.hover.right="'OCR'"
+          >
+            <a
+              href="#"
+              class="nav-link btn btn-icon btn-clean btn-lg"
+              data-toggle="tab"
+              v-on:click="setActiveTab"
+              data-tab="6"
+            >
+              <img
+                class="aside_main_icons"
+                src="media/images/updated_menu_icons/icon_affiliates_1.svg"
+              />
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -231,6 +251,18 @@
               </perfect-scrollbar>
             </div>
           </b-tab>
+          <b-tab class="p-3 px-lg-7 py-lg-5">
+            <h3 class="p-2 p-lg-3 my-1 my-lg-3">OCR</h3>
+
+            <div class="list list-hover">
+              <perfect-scrollbar
+                class="aside-menu scroll"
+                style="max-height: 90vh; position: relative"
+              >
+                <ocrmenu />
+              </perfect-scrollbar>
+            </div>
+          </b-tab>
         </b-tabs>
       </div>
     </div>
@@ -255,7 +287,7 @@ import clientsmenu from "../../pages/components/clients/ClientsMenu.vue";
 import reportsmenu from "../../pages/components/reports/ReportsMenu";
 import tweetauthormenu from "../../pages/components/tweet_authors/TweetAuthorMenu";
 import affiliatemenu from "../../pages/components/affiliate/AffiliateMenu";
-
+import ocrmenu from "../../pages/components/ocr/OCRMenu.vue";
 import {
   ADD_BODY_CLASSNAME,
   REMOVE_BODY_CLASSNAME
@@ -268,7 +300,8 @@ export default {
     clientsmenu,
     reportsmenu,
     tweetauthormenu,
-    affiliatemenu
+    affiliatemenu,
+    ocrmenu
   },
   data() {
     return {
