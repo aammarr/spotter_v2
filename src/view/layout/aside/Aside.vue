@@ -170,6 +170,26 @@
               />
             </a>
           </li>
+          <li
+            class="nav-item mb-3"
+            data-placement="right"
+            data-container="body"
+            data-boundary="window"
+            v-b-tooltip.hover.right="'GSA'"
+          >
+            <a
+              href="#"
+              class="nav-link btn btn-icon btn-clean btn-lg"
+              data-toggle="tab"
+              v-on:click="setActiveTab"
+              data-tab="8"
+            >
+              <img
+                class="aside_main_icons"
+                src="media/images/updated_menu_icons/icon_affiliates_1.svg"
+              />
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -309,6 +329,18 @@
               </perfect-scrollbar>
             </div>
           </b-tab>
+          <b-tab class="p-3 px-lg-7 py-lg-5">
+            <h3 class="p-2 p-lg-3 my-1 my-lg-3">GSA</h3>
+
+            <div class="list list-hover">
+              <perfect-scrollbar
+                class="aside-menu scroll"
+                style="max-height: 90vh; position: relative"
+              >
+                <gsamenu />
+              </perfect-scrollbar>
+            </div>
+          </b-tab>
         </b-tabs>
       </div>
     </div>
@@ -335,9 +367,10 @@ import reportsmenu from "../../pages/components/reports/ReportsMenu";
 import couponsmenu from "../../pages/components/coupons/CouponsMenu";
 import clientsmenu from "../../pages/components/clients/ClientsMenu";
 import tweetauthormenu from "../../pages/components/tweet_authors/TweetAuthorMenu";
+import gsamenu from "../../pages/components/gsa/GSAMenu.vue";
 import {
   ADD_BODY_CLASSNAME,
-  REMOVE_BODY_CLASSNAME
+  REMOVE_BODY_CLASSNAME,
 } from "@/core/services/store/htmlclass.module.js";
 export default {
   name: "KTAside",
@@ -347,7 +380,7 @@ export default {
       outsideTm: 0,
       tabIndex: 0,
       toggle_aside: false,
-      lockAside: false
+      lockAside: false,
     };
   },
   components: {
@@ -359,7 +392,8 @@ export default {
     reportsmenu,
     couponsmenu,
     clientsmenu,
-    tweetauthormenu
+    tweetauthormenu,
+    gsamenu,
     // KTQuickUser,
     // KTQuickActions, KTQuickPanel
   },
@@ -406,7 +440,7 @@ export default {
 
       // set current active tab
       target.classList.add("active");
-    }
+    },
   },
   computed: {
     ...mapGetters(["layoutConfig", "getClasses"]),
@@ -420,8 +454,8 @@ export default {
         return classes.join(" ");
       }
       return null;
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>

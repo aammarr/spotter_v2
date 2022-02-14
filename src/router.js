@@ -16,8 +16,8 @@ export default new Router({
           component: () => import("@/view/pages/Dashboard.vue"),
           meta: {
             headerFiltersEnable: true,
-            navSearchName: "Dashboard"
-          }
+            navSearchName: "Dashboard",
+          },
         },
         {
           path: "/metrics",
@@ -26,8 +26,8 @@ export default new Router({
             import("@/view/pages/components/metrics/Metrics.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Metrics"
-          }
+            navSearchName: "Metrics",
+          },
         },
         {
           path: "/add-coupon",
@@ -36,8 +36,8 @@ export default new Router({
             import("@/view/pages/components/coupons/AddCoupon.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Add Coupon"
-          }
+            navSearchName: "Add Coupon",
+          },
         },
         {
           path: "/search-coupon",
@@ -46,8 +46,8 @@ export default new Router({
             import("@/view/pages/components/coupons/SearchCoupon.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Search Coupon"
-          }
+            navSearchName: "Search Coupon",
+          },
         },
         {
           path: "/keyword",
@@ -56,8 +56,8 @@ export default new Router({
             import("@/view/pages/components/coupons/Keyword.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Keyword"
-          }
+            navSearchName: "Keyword",
+          },
         },
         {
           path: "/valid-tweets",
@@ -66,8 +66,8 @@ export default new Router({
             import("@/view/pages/components/tweets/ValidTweets.vue"),
           meta: {
             headerFiltersEnable: true,
-            navSearchName: "Valid Tweets"
-          }
+            navSearchName: "Valid Tweets",
+          },
         },
         {
           path: "/spam-tweets",
@@ -76,8 +76,8 @@ export default new Router({
             import("@/view/pages/components/tweets/SpamTweets.vue"),
           meta: {
             headerFiltersEnable: true,
-            navSearchName: "Span Tweets"
-          }
+            navSearchName: "Span Tweets",
+          },
         },
         {
           path: "/add-tweets",
@@ -86,8 +86,8 @@ export default new Router({
             import("@/view/pages/components/tweets/AddTweets.vue"),
           meta: {
             headerFiltersEnable: true,
-            navSearchName: "Add Tweets"
-          }
+            navSearchName: "Add Tweets",
+          },
         },
         {
           path: "/all-tweets",
@@ -96,8 +96,8 @@ export default new Router({
             import("@/view/pages/components/tweets/AllTweets.vue"),
           meta: {
             headerFiltersEnable: true,
-            navSearchName: "All Tweets"
-          }
+            navSearchName: "All Tweets",
+          },
         },
         {
           path: "/add-clients",
@@ -106,8 +106,8 @@ export default new Router({
             import("@/view/pages/components/clients/AddClients.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Add Clients"
-          }
+            navSearchName: "Add Clients",
+          },
         },
         {
           path: "/search-clients",
@@ -116,8 +116,8 @@ export default new Router({
             import("@/view/pages/components/clients/SearchClients.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Search Clients"
-          }
+            navSearchName: "Search Clients",
+          },
         },
         {
           path: "/pdf-report",
@@ -126,8 +126,8 @@ export default new Router({
             import("@/view/pages/components/reports/PdfReport.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "PDF Report"
-          }
+            navSearchName: "PDF Report",
+          },
         },
         {
           path: "/add-username",
@@ -138,8 +138,8 @@ export default new Router({
             ),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Add valid Username"
-          }
+            navSearchName: "Add valid Username",
+          },
         },
         {
           path: "/delete-username",
@@ -150,8 +150,8 @@ export default new Router({
             ),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Delete Valid Username"
-          }
+            navSearchName: "Delete Valid Username",
+          },
         },
         {
           path: "/all-frequentspammers",
@@ -162,8 +162,8 @@ export default new Router({
             ),
           meta: {
             headerFiltersEnable: true,
-            navSearchName: "All Frequent Spammers"
-          }
+            navSearchName: "All Frequent Spammers",
+          },
         },
         {
           path: "/affiliates",
@@ -172,18 +172,18 @@ export default new Router({
             import("@/view/pages/components/affiliate/SearchAffiliate.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Search Affiliate"
-          }
+            navSearchName: "Search Affiliate",
+          },
         },
         {
           path: "/selected-Coupon",
           name: "selectedCoupon",
-          props: route => ({ query: route.query.q }),
+          props: (route) => ({ query: route.query.q }),
           component: () =>
             import("@/view/pages/components/affiliate/SelectedCoupon.vue"),
           meta: {
-            headerFiltersEnable: false
-          }
+            headerFiltersEnable: false,
+          },
         },
         {
           path: "/ocr",
@@ -191,8 +191,8 @@ export default new Router({
           component: () => import("@/view/pages/components/ocr/OCR.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "OCR"
-          }
+            navSearchName: "OCR",
+          },
         },
         {
           path: "/landmark",
@@ -201,8 +201,8 @@ export default new Router({
             import("@/view/pages/components/landmark/Landmark.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Land Mark"
-          }
+            navSearchName: "Land Mark",
+          },
         },
         {
           path: "/user-profile",
@@ -211,8 +211,8 @@ export default new Router({
             import("@/view/pages/components/settings/Profile.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "User Profile"
-          }
+            navSearchName: "User Profile",
+          },
         },
         {
           path: "/account-setting",
@@ -221,8 +221,8 @@ export default new Router({
             import("@/view/pages/components/settings/AccountSetting.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Account Setting"
-          }
+            navSearchName: "Account Setting",
+          },
         },
         {
           path: "/logs",
@@ -230,10 +230,19 @@ export default new Router({
           component: () => import("@/view/pages/components/settings/Logs.vue"),
           meta: {
             headerFiltersEnable: false,
-            navSearchName: "Logs"
-          }
-        }
-      ]
+            navSearchName: "Logs",
+          },
+        },
+        {
+          path: "/gsa",
+          name: "gsa",
+          component: () => import("@/view/pages/components/gsa/GSA.vue"),
+          meta: {
+            headerFiltersEnable: false,
+            navSearchName: "GSA",
+          },
+        },
+      ],
     },
     {
       path: "/",
@@ -245,8 +254,8 @@ export default new Router({
           component: () => import("@/view/pages/auth/Login"),
           meta: {
             headerFiltersEnable: false,
-            restricted: true
-          }
+            restricted: true,
+          },
         },
         {
           name: "register",
@@ -254,8 +263,8 @@ export default new Router({
           component: () => import("@/view/pages/auth/Register"),
           meta: {
             headerFiltersEnable: false,
-            restricted: true
-          }
+            restricted: true,
+          },
         },
         {
           name: "forgotpassword",
@@ -263,8 +272,8 @@ export default new Router({
           component: () => import("@/view/pages/auth/ForgotPassword"),
           meta: {
             headerFiltersEnable: false,
-            restricted: true
-          }
+            restricted: true,
+          },
         },
         {
           name: "newpassword",
@@ -272,20 +281,20 @@ export default new Router({
           component: () => import("@/view/pages/auth/NewPassword"),
           meta: {
             headerFiltersEnable: false,
-            restricted: true
-          }
-        }
-      ]
+            restricted: true,
+          },
+        },
+      ],
     },
     {
       path: "*",
-      redirect: "/404"
+      redirect: "/404",
     },
     {
       // the 404 route, when none of the above matches
       path: "/404",
       name: "404",
-      component: () => import("@/view/pages/error/Error-1.vue")
-    }
-  ]
+      component: () => import("@/view/pages/error/Error-1.vue"),
+    },
+  ],
 });
